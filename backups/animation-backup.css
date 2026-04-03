@@ -1,0 +1,4 @@
+314:.hero-logo {
+319:    animation: bullShake 4s ease-in-out infinite;
+322:@keyframes bullShake {
+1000:    .hero-logo {

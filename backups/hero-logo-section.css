@@ -1,0 +1,20 @@
+/* BACKUP — hero logo animation as of 2026-04-02 */
+.hero-logo {
+    width: 320px;
+    height: auto;
+    margin-bottom: 32px;
+    filter: drop-shadow(0 8px 32px rgba(212, 168, 66, 0.3));
+    animation: bullShake 4s ease-in-out infinite;
+}
+
+@keyframes bullShake {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    15% { transform: rotate(-3deg) translateY(-2px); }
+    25% { transform: rotate(4deg) translateY(0); }
+    35% { transform: rotate(-2deg) translateY(-1px); }
+    45% { transform: rotate(1deg) translateY(0); }
+    55%, 100% { transform: rotate(0deg) translateY(0); }
+}
+
+/* Mobile */
+.hero-logo { width: 240px; }
