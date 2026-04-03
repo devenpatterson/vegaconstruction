@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="silver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e8e8"/>
+      <stop offset="50%" style="stop-color:#c0c0c0"/>
+      <stop offset="100%" style="stop-color:#a0a0a0"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0d078"/>
+      <stop offset="50%" style="stop-color:#d4a842"/>
+      <stop offset="100%" style="stop-color:#b8922e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left horn (silver) -->
+  <path d="M 120 80 Q 80 30 60 15 Q 75 45 90 70 L 130 95 Z" fill="url(#silver)" filter="url(#glow)"/>
+  <!-- V shape center silver side -->
+  <path d="M 130 95 L 170 130 L 155 130 L 120 100 Z" fill="url(#silver)"/>
+
+  <!-- Right horn (gold) -->
+  <path d="M 280 80 Q 320 30 340 15 Q 325 45 310 70 L 270 95 Z" fill="url(#gold)" filter="url(#glow)"/>
+  <!-- C shape center gold side -->
+  <path d="M 270 95 L 230 130 L 245 130 L 280 100 Z" fill="url(#gold)"/>
+
+  <!-- VC letterform center -->
+  <path d="M 155 70 L 200 120 L 245 70 L 230 70 L 200 105 L 170 70 Z" fill="url(#silver)"/>
+  <path d="M 200 105 L 200 120 L 245 70 L 260 70 L 260 80 Q 240 100 225 120 L 200 130 Z" fill="url(#gold)"/>
+
+  <!-- VEGA text -->
+  <text x="200" y="162" text-anchor="middle" font-family="'Montserrat', Arial, sans-serif" font-weight="800" font-size="32" letter-spacing="6" fill="#ffffff">VEGA</text>
+  <!-- CONSTRUCTION text -->
+  <text x="200" y="182" text-anchor="middle" font-family="'Montserrat', Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="4" fill="#c0c0c0">CONSTRUCTION</text>
+  <!-- LLC text -->
+  <text x="200" y="196" text-anchor="middle" font-family="'Montserrat', Arial, sans-serif" font-weight="600" font-size="10" letter-spacing="3" fill="#808080">LLC.</text>
+</svg>
