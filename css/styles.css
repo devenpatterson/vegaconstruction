@@ -14,11 +14,11 @@
     --gold-hover: #e8bc4a;
     --gold-glow: rgba(212, 168, 66, 0.3);
     --silver: #c0c0c0;
-    --dark: #1a1a2e;
-    --darker: #0f0f1a;
+    --dark: #2a2a2f;
+    --darker: #141416;
     --body-text: #b0b0c0;
     --light-text: #7a7a8e;
-    --bg: #1e2028;
+    --bg: #1c1c20;
     --white: #ffffff;
     --glass-light: rgba(255, 255, 255, 0.06);
     --glass-light-border: rgba(255, 255, 255, 0.12);
@@ -134,7 +134,7 @@ img {
 }
 
 .navbar.scrolled {
-    background: rgba(30, 32, 40, 0.9);
+    background: rgba(28, 28, 32, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -260,7 +260,7 @@ img {
 .hero-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 30%, #16213e 60%, #0f3460 100%);
+    background: linear-gradient(135deg, #141416 0%, #1c1c20 30%, #242428 60%, #2a2a30 100%);
 }
 
 .hero-gradient::before {
@@ -316,12 +316,16 @@ img {
     height: auto;
     margin-bottom: 32px;
     filter: drop-shadow(0 8px 32px rgba(212, 168, 66, 0.3));
-    animation: logoFloat 4s ease-in-out infinite;
+    animation: bullShake 4s ease-in-out infinite;
 }
 
-@keyframes logoFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+@keyframes bullShake {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    15% { transform: rotate(-3deg) translateY(-2px); }
+    25% { transform: rotate(4deg) translateY(0); }
+    35% { transform: rotate(-2deg) translateY(-1px); }
+    45% { transform: rotate(1deg) translateY(0); }
+    55%, 100% { transform: rotate(0deg) translateY(0); }
 }
 
 .hero-title {
@@ -565,7 +569,7 @@ img {
 /* --- About --- */
 .about {
     padding: 80px 0;
-    background: #171920;
+    background: #18181c;
 }
 
 .about-grid {
@@ -610,7 +614,7 @@ img {
 }
 
 .about-glass-card {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: linear-gradient(135deg, #1c1c20, #242428);
     border-radius: var(--radius);
     padding: 48px 36px;
     position: relative;
@@ -691,7 +695,7 @@ img {
 
 /* --- CTA Band --- */
 .cta-band {
-    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 40%, #16213e 100%);
+    background: linear-gradient(135deg, #141416 0%, #1c1c20 40%, #242428 100%);
     padding: 100px 0;
     position: relative;
     overflow: hidden;
