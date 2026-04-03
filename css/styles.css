@@ -329,7 +329,7 @@ img {
     width: 100%;
     height: auto;
     filter: drop-shadow(0 8px 32px rgba(212, 168, 66, 0.3));
-    animation: bullShake 3.5s ease-in-out infinite, bullGlow 3.5s ease-in-out infinite;
+    animation: bullShake 3.5s ease-in-out infinite;
     transform-origin: 50% 85%;
 }
 
@@ -342,27 +342,6 @@ img {
     50% { transform: rotate(-1deg); }
 }
 
-/* Glow pulses during the shake — makes the existing lightning art in the logo flare */
-@keyframes bullGlow {
-    0%, 55%, 100% {
-        filter: drop-shadow(0 8px 32px rgba(212, 168, 66, 0.3));
-    }
-    10%, 20% {
-        filter: drop-shadow(0 4px 20px rgba(212, 168, 66, 0.7))
-               drop-shadow(0 0 40px rgba(255, 255, 255, 0.15));
-    }
-    15%, 25% {
-        filter: drop-shadow(0 6px 16px rgba(212, 168, 66, 0.4));
-    }
-    30%, 40% {
-        filter: drop-shadow(0 4px 24px rgba(212, 168, 66, 0.6))
-               drop-shadow(0 0 30px rgba(212, 168, 66, 0.2));
-    }
-    35% {
-        filter: drop-shadow(0 8px 20px rgba(212, 168, 66, 0.35));
-    }
-}
-
 .hero-logo-text {
     width: 200px;
     height: auto;
@@ -370,38 +349,8 @@ img {
     display: block;
 }
 
-/* Shimmer wraps the text — uses mix-blend-mode so it only lights up the visible pixels */
 .hero-logo-text-wrap {
-    position: relative;
     display: inline-block;
-    isolation: isolate;
-}
-
-.hero-logo-text-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
-    mix-blend-mode: overlay;
-    animation: shimmer 3.5s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes shimmer {
-    0%, 50% { left: -100%; }
-    55% { left: -100%; }
-    80% { left: 150%; }
-    100% { left: 150%; }
 }
 
 .hero-title {
