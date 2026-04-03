@@ -312,7 +312,7 @@ img {
 }
 
 .hero-logo {
-    width: 220px;
+    width: 320px;
     height: auto;
     margin-bottom: 32px;
     filter: drop-shadow(0 8px 32px rgba(212, 168, 66, 0.3));
@@ -994,7 +994,7 @@ img {
     }
 
     .hero-logo {
-        width: 160px;
+        width: 240px;
     }
 
     .hero-cta {
