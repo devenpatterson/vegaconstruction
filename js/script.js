@@ -88,23 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
         particlesContainer.appendChild(particle);
     }
 
-    // --- Form Handling (basic client-side) ---
+    // --- Form Handling (mailto) ---
     const quoteForm = document.getElementById('quoteForm');
 
     quoteForm.addEventListener('submit', (e) => {
-        // If no Formspree ID is set, prevent default and show message
-        const action = quoteForm.getAttribute('action');
-        if (action.includes('YOUR_FORM_ID')) {
-            e.preventDefault();
-            const btn = quoteForm.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.textContent = 'Form setup needed — call us!';
-            btn.style.background = 'rgba(255,255,255,0.1)';
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '';
-            }, 3000);
-        }
+        e.preventDefault();
+        const name = quoteForm.querySelector('[name="name"]').value;
+        const phone = quoteForm.querySelector('[name="phone"]').value;
+        const email = quoteForm.querySelector('[name="email"]').value;
+        const service = quoteForm.querySelector('[name="service"]').value;
+        const message = quoteForm.querySelector('[name="message"]').value;
+
+        const subject = encodeURIComponent('Quote Request — ' + service + ' — ' + name);
+        const body = encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'Phone: ' + phone + '\n' +
+            'Email: ' + email + '\n' +
+            'Service: ' + service + '\n\n' +
+            'Project Details:\n' + message
+        );
+
+        window.location.href = 'mailto:Nicolasvega91@icloud.com?subject=' + subject + '&body=' + body;
     });
 
 });
